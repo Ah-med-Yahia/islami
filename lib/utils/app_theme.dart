@@ -7,10 +7,33 @@ class AppTheme {
 
   static ThemeData appTheme = ThemeData(
     primaryColor: primaryColor,
+    textTheme: const TextTheme(
+      headlineSmall: TextStyle(
+        fontSize: 24,
+        fontWeight: FontWeight.bold,
+        color: white
+      ),
+      titleLarge: TextStyle(
+        fontSize: 20,
+        fontWeight: FontWeight.bold,
+        color: white
+      ),
+      titleMedium:  TextStyle(
+        fontSize: 16,
+        fontWeight: FontWeight.bold,
+        color: white
+      ),
+      titleSmall: TextStyle(
+        fontSize: 14,
+        fontWeight: FontWeight.bold,
+        color: white
+      )
+    ),
     bottomNavigationBarTheme: const BottomNavigationBarThemeData(
+      selectedItemColor: AppTheme.white,
       backgroundColor: primaryColor,
       showUnselectedLabels: false,
       type: BottomNavigationBarType.fixed,
-    )
+    ),
   );
 }

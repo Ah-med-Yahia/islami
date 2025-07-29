@@ -19,6 +19,15 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen> {
   int currentTab = 0;
+
+  List<String> backgroundTabs = [
+    AppAssets.quranBackground,
+    AppAssets.hadeethBackground,
+    AppAssets.sebhaBackground,
+    AppAssets.radioBackground,
+    AppAssets.timeBackground
+  ];
+
   List<Widget> tabs = [
     const QuranTab(),
     const HadeethTab(),
@@ -70,7 +79,23 @@ class _HomeScreenState extends State<HomeScreen> {
               label: 'Time'),
         ],
       ),
-      body: tabs[currentTab],
+      body: Container(
+        width: double.infinity,
+        decoration: BoxDecoration(
+          image: DecorationImage(
+              fit: BoxFit.fill, image: AssetImage(backgroundTabs[currentTab])),
+        ),
+        child: Column(
+          children: [
+            Image.asset(
+              AppAssets.header,
+              height: MediaQuery.sizeOf(context).height * .15,
+              fit: BoxFit.fitWidth,
+            ),
+            Expanded(child: tabs[currentTab])
+          ],
+        ),
+      ),
     );
   }
 }
