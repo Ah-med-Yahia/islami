@@ -3,7 +3,7 @@ import 'package:islami/services/sura_model.dart';
 import 'package:islami/utils/app_assets.dart';
 
 class SuraItem extends StatelessWidget {
-  const SuraItem({super.key,required this.sura});
+  const SuraItem({super.key, required this.sura});
 
   final SuraModel sura;
 
@@ -21,7 +21,7 @@ class SuraItem extends StatelessWidget {
               image: DecorationImage(
                   image: AssetImage(AppAssets.suraNumberFrame))),
           child: Text(
-            '1',
+            '${sura.num}',
             style: textTheme.titleLarge,
           ),
         ),

@@ -7,6 +7,17 @@ class AppTheme {
 
   static ThemeData appTheme = ThemeData(
     primaryColor: primaryColor,
+    scaffoldBackgroundColor: black,
+    appBarTheme: const AppBarTheme(
+      backgroundColor: black,
+      foregroundColor: primaryColor,
+      centerTitle: true,
+      titleTextStyle:  TextStyle(
+        fontSize: 20,
+        fontWeight: FontWeight.bold,
+        color: primaryColor
+      )
+    ),
     textTheme: const TextTheme(
       headlineSmall: TextStyle(
         fontSize: 24,
