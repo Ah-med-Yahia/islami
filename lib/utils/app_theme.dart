@@ -46,5 +46,29 @@ class AppTheme {
       showUnselectedLabels: false,
       type: BottomNavigationBarType.fixed,
     ),
+    inputDecorationTheme: InputDecorationTheme(
+      hintStyle: TextStyle(
+        fontSize: 16,
+        fontWeight: FontWeight.bold,
+        color: white.withOpacity(.6)
+      ),
+      enabledBorder: OutlineInputBorder(
+        borderSide: const BorderSide(
+          width: 1,
+          color:primaryColor, 
+        ),
+        borderRadius: BorderRadius.circular(10)
+      ),
+      focusedBorder: OutlineInputBorder(
+        borderSide: const BorderSide(
+          width: 1,
+          color:primaryColor, 
+        ),
+        borderRadius: BorderRadius.circular(10)
+      ),
+      filled: true,
+      fillColor: black.withOpacity(.7),
+      
+    )
   );
 }

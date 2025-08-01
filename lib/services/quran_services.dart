@@ -350,15 +350,28 @@ class QuranServices {
     5,
     6
   ];
-  static List<SuraModel> suras = List.generate(114, (index) {
+  static List<SuraModel> suras = List.generate(114, getSuraFromIndex);
+
+  static Future<String> loadSuraFile(int suraNum) {
+    return rootBundle.loadString('text/$suraNum.txt');
+  }
+
+  static SuraModel getSuraFromIndex(int index) {
     return SuraModel(
         arabicName: arabicSuraNames[index],
         ayaCounts: ayaCounts[index],
         englishName: englishSuraNames[index],
         num: index + 1);
-  });
+  }
 
-  static Future<String> loadSuraFile(int suraNum) {
-    return rootBundle.loadString('text/$suraNum.txt');
+  static void searchSura(String query) {
+    suras.clear();
+    for (int i = 0; i < 114; i++) {
+      if (arabicSuraNames[i].contains(query) ||
+          englishSuraNames[i].toLowerCase().contains(query.toLowerCase())) {
+        SuraModel sura = getSuraFromIndex(i);
+        suras.add(sura);
+      }
+    }
   }
 }

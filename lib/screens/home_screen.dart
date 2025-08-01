@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:islami/screens/hadeeth.dart';
-import 'package:islami/screens/quran.dart';
-import 'package:islami/screens/radio.dart';
-import 'package:islami/screens/sebha.dart';
-import 'package:islami/screens/time.dart';
+import 'package:islami/screens/tabs/hadeeth_tab.dart';
+import 'package:islami/screens/tabs/quran_tab.dart';
+import 'package:islami/screens/tabs/radio_tab.dart';
+import 'package:islami/screens/tabs/sebha_tab.dart';
+import 'package:islami/screens/tabs/time_tab.dart';
 import 'package:islami/utils/app_assets.dart';
 import 'package:islami/widgets/nav_bar_selected_item.dart';
 import 'package:islami/widgets/nav_bar_unselected_item.dart';
