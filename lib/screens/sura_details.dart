@@ -74,7 +74,9 @@ class _SuraDetailsScreenState extends State<SuraDetailsScreen> {
                       );
                     },
                     separatorBuilder: (context, index) {
-                      return const SizedBox();
+                      return const SizedBox(
+                        height: 20,
+                      );
                     },
                   ),
           ),

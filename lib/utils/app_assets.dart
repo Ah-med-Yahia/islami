@@ -14,4 +14,5 @@ class AppAssets {
   static const String leftHeaderSuraDetails = 'images/left_header_sura_details.png';
   static const String rightHeaderSuraDetails = 'images/right_header_sura_details.png';
   static const String suraDetailsFooter= 'images/sura_details_footer.png';
+  static const String mostRecentlyBackGround= 'images/most_rec_background.png';
 }

@@ -4,6 +4,7 @@ import 'package:islami/screens/sura_details.dart';
 import 'package:islami/services/quran_services.dart';
 import 'package:islami/utils/app_assets.dart';
 import 'package:islami/utils/app_theme.dart';
+import 'package:islami/widgets/most_recently_sec.dart';
 import 'package:islami/widgets/sura_item.dart';
 
 class QuranTab extends StatefulWidget {
@@ -43,6 +44,13 @@ class _QuranTabState extends State<QuranTab> {
             },
           ),
         ),
+        if (QuranServices.mostRecentlySuars.isNotEmpty)
+          Padding(
+            padding: const EdgeInsets.only(left: 20, top: 20),
+            child: MostRecentlySec(
+              mostRecentlySuars: QuranServices.mostRecentlySuars.reversed.toList(),
+            ),
+          ),
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
           child: Text(
@@ -56,9 +64,13 @@ class _QuranTabState extends State<QuranTab> {
           itemCount: QuranServices.suras.length,
           itemBuilder: (context, index) {
             return InkWell(
-                onTap: () {
-                  Navigator.of(context).pushNamed(SuraDetailsScreen.routeName,
+                onTap: () async {
+                  QuranServices.addSuraToMostRecently(
+                      QuranServices.suras[index]);
+                  await Navigator.of(context).pushNamed(
+                      SuraDetailsScreen.routeName,
                       arguments: QuranServices.suras[index]);
+                  setState(() {});
                 },
                 child: SuraItem(sura: QuranServices.suras[index]));
           },

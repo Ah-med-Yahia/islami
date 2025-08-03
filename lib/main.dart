@@ -1,9 +1,14 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:islami/screens/home_screen.dart';
 import 'package:islami/screens/sura_details.dart';
+import 'package:islami/services/quran_services.dart';
 import 'package:islami/utils/app_theme.dart';
 
-void main() {
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await QuranServices.getSuarsFromMostRecently();
   runApp(const IslamiApp());
 }
 
@@ -17,8 +22,8 @@ class IslamiApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: AppTheme.appTheme,
       routes: {
-        HomeScreen.routeName:(_)=>const HomeScreen(),
-        SuraDetailsScreen.routeName:(_)=>const SuraDetailsScreen(),
+        HomeScreen.routeName: (_) => const HomeScreen(),
+        SuraDetailsScreen.routeName: (_) => const SuraDetailsScreen(),
       },
     );
   }
