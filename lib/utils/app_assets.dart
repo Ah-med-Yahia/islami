@@ -11,8 +11,12 @@ class AppAssets {
   static const String radioBackground = 'images/radio_background.png';
   static const String timeBackground = 'images/time_background.png';
   static const String suraNumberFrame = 'images/sura_number_frame.png';
-  static const String leftHeaderSuraDetails = 'images/left_header_sura_details.png';
-  static const String rightHeaderSuraDetails = 'images/right_header_sura_details.png';
+  static const String leftHeaderDetails = 'images/left_header_sura_details.png';
+  static const String rightHeaderDetails = 'images/right_header_sura_details.png';
   static const String suraDetailsFooter= 'images/sura_details_footer.png';
   static const String mostRecentlyBackGround= 'images/most_rec_background.png';
+  static const String hadeethFooter= 'images/hadeeth_footer.png';
+  static const String rightHadeethCorner= 'images/right_hadeeth_cornerr.png';
+  static const String leftHadeethCorner= 'images/left_hadeeth_cornerr.png';
+  static const String hadeethCardBackground= 'images/hadithcardbackground.png';
 }

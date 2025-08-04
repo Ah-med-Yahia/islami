@@ -45,7 +45,7 @@ class _SuraDetailsScreenState extends State<SuraDetailsScreen> {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Image.asset(
-                  AppAssets.leftHeaderSuraDetails,
+                  AppAssets.leftHeaderDetails,
                   height: screenHeight * .1,
                   fit: BoxFit.fill,
                 ),
@@ -54,7 +54,7 @@ class _SuraDetailsScreenState extends State<SuraDetailsScreen> {
                   style: textTheme.headlineSmall!
                       .copyWith(color: AppTheme.primaryColor),
                 ),
-                Image.asset(AppAssets.rightHeaderSuraDetails,
+                Image.asset(AppAssets.rightHeaderDetails,
                     height: screenHeight * .1, fit: BoxFit.fill),
               ],
             ),
@@ -83,6 +83,7 @@ class _SuraDetailsScreenState extends State<SuraDetailsScreen> {
           Image.asset(
             AppAssets.suraDetailsFooter,
             width: double.infinity,
+            fit: BoxFit.fill,
           )
         ],
       ),
